@@ -1,0 +1,156 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ObservationWho3g-cf-profile",
+  "meta": {
+    "versionId": "3",
+    "lastUpdated": "2019-01-22T17:12:52.714+00:00"
+  },
+  "url": "http://fhirtest.uhn.ca/baseDstu3/StructureDefinition/ObservationWho3g-cf-profile",
+  "identifier": [
+    {
+      "system": "http://clinfhir.com",
+      "value": "author"
+    }
+  ],
+  "name": "ObservationWho3g",
+  "title": "ECOG / WHO3G",
+  "status": "draft",
+  "date": "2019-01-22T18:10:57+01:00",
+  "publisher": "Maastro - Knowledge Engineering Group",
+  "purpose": "ECOG Performance of the patient.",
+  "keyword": [
+    {
+      "system": "http://fhir.hl7.org.nz/NamingSystem/application",
+      "code": "clinfhir"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "snapshot": {
+    "element": [
+      {
+        "id": "Observation:Observation-0",
+        "path": "Observation",
+        "label": "ObservationWho3g",
+        "definition": "No description",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation:Observation.identifier-1",
+        "path": "Observation.identifier",
+        "label": "identifier",
+        "short": "Business Identifier for observation",
+        "definition": "A unique identifier assigned to this observation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.identifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "fhir",
+            "map": "Observation.identifier|"
+          }
+        ]
+      },
+      {
+        "id": "Observation:Observation.category-2",
+        "path": "Observation.category",
+        "label": "category",
+        "short": "Classification of  type of observation",
+        "definition": "A code that classifies the general type of observation being made.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.category",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "fixedString": "\"survey\"",
+        "binding": {
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-category"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "fhir",
+            "map": "Observation.category|"
+          }
+        ]
+      },
+      {
+        "id": "Observation:Observation.code-3",
+        "path": "Observation.code",
+        "label": "code",
+        "short": "Type of observation (code / type)",
+        "definition": "Describes what was observed. Sometimes this is called the observation \"name\".",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.code",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "fhir",
+            "map": "Observation.code|"
+          }
+        ]
+      },
+      {
+        "id": "Observation:Observation.subject-4",
+        "path": "Observation.subject",
+        "label": "subject",
+        "short": "Who and/or what this is about",
+        "definition": "The patient, or group of patients, location, or device whose characteristics (direct or indirect) are described by the observation and into whose record the observation is placed.  Comments: Indirect characteristics may be those of a specimen, fetus, donor,  other observer (for example a relative or EMT), or any observation made about the subject.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.subject",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Resource"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "fhir",
+            "map": "Observation.subject|"
+          }
+        ]
+      }
+    ]
+  }
+}
