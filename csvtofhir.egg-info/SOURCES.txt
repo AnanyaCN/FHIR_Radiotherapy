@@ -1,0 +1,12 @@
+README.md
+setup.py
+csvtofhir/__init__.py
+csvtofhir/_csvparser.py
+csvtofhir/_mapping.py
+csvtofhir/main.py
+csvtofhir/tofhir.py
+csvtofhir.egg-info/PKG-INFO
+csvtofhir.egg-info/SOURCES.txt
+csvtofhir.egg-info/dependency_links.txt
+csvtofhir.egg-info/entry_points.txt
+csvtofhir.egg-info/top_level.txt

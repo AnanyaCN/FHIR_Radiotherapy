@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: csvtofhir
+Version: 0.1
+Summary: Code for converting radiotherapy data to fhir resources
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: BSD License
+Description: UNKNOWN
+Keywords: fhir radiotherapy oncology csv
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Free for Educational Use
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python 3.6
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator

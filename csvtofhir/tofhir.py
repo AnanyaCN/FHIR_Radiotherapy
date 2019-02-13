@@ -1,21 +1,27 @@
-import sys
-import argparse
-import os.path
-import csv
+import pandas
+from csvtofhir._mapping import _mapping
 
-def is_valid_file(parser, arg):
-    if not os.path.exists(arg):
-        parser.errror("The file %s does not exist!" %arg)
-    else:
-        return open(arg, 'r') # return an open file handle
+class radData:
 
-parser = argparse.ArgumentParser(description= 'csv to fhir resources', usage='csvtofhir [-h] [--]')
-parser.add_argument('-input', dest='filename', required=True, help = 'input csv or excel file containing data', metavar='FILE')
+    def parse_csv(self,csvfile):
 
-def main():
-    args = parser.parse_args()
+        #Read Data from csv file
+        data = pandas.read_csv(csvfile)
+        header_list = list(data)
+
+        #List available profiles
+        datamap = _mapping()
+
+        #print(datamap.get_profiles())
+        datamap.default_map(header_list,profile_set=datamap.get_profiles())
 
 
-if __name__== "__main__":
-    main()
+
+
+# from csvtofhir._mapping import _mapping
+#
+# mapper = _mapping()
+#
+# profile_list = mapper.get_profiles()
+# print(profile_list)
 

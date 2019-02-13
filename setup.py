@@ -5,12 +5,12 @@ from setuptools import setup, find_packages
 setup(
     name = "csvtofhir",
     version = "0.1",
-    packages = find_packages(),
-    scripts = ['main.py'],
+    #packages = find_packages(),
 
+    packages = ['csvtofhir'],
+    package_data = {},
     entry_points={
-          'console_scripts': [
-              'csvtofhir = csv2fhir.tofhir:main'
+          'console_scripts':['csvtofhir = csvtofhir.main:cli'
           ]
       },
 
