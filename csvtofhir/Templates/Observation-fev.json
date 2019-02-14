@@ -1,0 +1,47 @@
+{
+  "resourceType": "Observation",
+  "id": "{{obsFev_id}}",
+  "meta": [{
+          "versionId": "1",
+          "lastUpdated": "2018-11-12T10:19:25.176+00:00"
+  }],
+  "text": [{
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> </div>"
+  }],
+  "category":{
+          "coding": [{
+                    "system":"http://hl7.org/fhir/observation-category",
+                    "code":"procedure",
+                    "display":"Procedure"
+    }]
+  },
+  "code": {
+          "coding": [
+            {
+                    "system": "https://cbiit.cancer.gov",
+                    "code": "C38084",
+                    "display": "Forced Expiratory Volume in 1 sec"
+            }
+          ]
+        },
+  "subject" : {
+          "reference": "Patient/{{pat_id}}"
+  },
+  "valueQuantity":{
+          "coding":[
+            {
+                    "value":"{{fev_val}}",
+                    "unit":"Percentage",
+                    "system":"http://unitsofmeasure.org",
+                    "code":"%"
+            }
+          ]
+  }
+}
+
+
+
+
+
+

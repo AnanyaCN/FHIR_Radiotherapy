@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "{{obsEcog_id}}",
+  "meta": [{
+          "versionId": "1",
+          "lastUpdated": "2018-11-12T10:19:25.176+00:00"
+  }],
+  "text": [{
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> </div>"
+  }],
+  "category":{
+          "coding": [{
+                    "system":"http://hl7.org/fhir/observation-category",
+                    "code":"survey",
+                    "display":"Survey"
+    }]
+  },
+  "code": {
+          "coding": [
+            {
+                    "system": "https://cbiit.cancer.gov",
+                    "code": "C105721",
+                    "display": "ECOG Performance Status"
+            }
+          ]
+        },
+  "subject" : {
+          "reference": "Patient/{{pat_id}}"
+  },
+  "valueCodeableConcepy":{
+          "coding":[
+            {
+                    "system":"https://cbiit.cancer.gov",
+                    "code":"{{code}}",
+                    "display value":"{{disp_val}}"
+            }
+          ]
+  }
+}
+
+
+
+
+

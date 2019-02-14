@@ -1,7 +1,9 @@
 import os
 import shutil
+from collections import defaultdict
 
 class _mapping:
+
 
     """List all profiles"""
     def get_profiles(self):
@@ -11,12 +13,18 @@ class _mapping:
             profile_set.add(os.path.splitext(files)[0])
         return profile_set
 
-    def default_map(self, header_list,profile_set):
-        print("default mapping")
-        mapping_dict = dict.fromkeys(profile_set)
-        #for entries in header_list:
+    # def default_map(self, header_list,profile_set):
+    #     print("default mapping")
+    #     patient_default = ['gender', 'age', 'deadstat']
+    #     mapping_dict = dict.fromkeys(profile_set)
+    #     count = 0
+    #     for entry in header_list:
+    #         if entry in patient_default:
+    #             mapping_dict['patient_default'][count]==entry
+    #         count+=1
 
 
+       # print(mapping_dict)
 
     def add_profiles(self, filepath):
         print("add profiles")  # Profile names should be [base_resource]-[profile_name]  e.g. observation-bmi

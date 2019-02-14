@@ -22,7 +22,8 @@ def tofhir(flag,name):
         csvfile = click.format_filename(name)
 
     df = radData()
-    df.parse_csv(csvfile)
+    #df.parse_csv(csvfile)
+    df.convert(csvfile)
 
 @click.command()
 @click.option('--count',default=1, help="Profiling")

@@ -1,0 +1,15 @@
+{
+  "resourceType": "Condition",
+  "id": "{{con_id}}",
+  "meta": [{
+    "versionId": "1",
+    "lastUpdated": "2018-11-12T10:19:25.176+00:00"
+  }],
+  "text": [{
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> </div>"
+  }],
+  "gender" : "{{gender}}",
+  "birthDate" : "{{birthDate}}",
+  "deceasedBoolean" : "{{deceasedBoolean}}"
+}
